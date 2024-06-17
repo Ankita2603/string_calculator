@@ -6,8 +6,8 @@ class StringCalculator
   def add
     return 0 if @string_numbers.empty?
 
-		delimiter = ","
-		if @string_numbers.start_with?("//")
+    delimiter = ","
+    if @string_numbers.start_with?("//")
       parts = @string_numbers.split("\n", 2)
       delimiter = parts[0][2..]
       @string_numbers = parts[1]
