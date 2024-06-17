@@ -14,7 +14,7 @@ class StringCalculator
     end
 
     nums = @string_numbers.split(/[#{delimiter}\n]/).map(&:to_i)
-		negatives = nums.select { |n| n < 0 }
+    negatives = nums.select { |n| n < 0 }
     raise "Negative numbers not allowed: #{negatives.join(',')}" if negatives.any?
 
     nums.sum
