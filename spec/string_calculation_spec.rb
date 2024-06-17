@@ -22,5 +22,15 @@ RSpec.describe StringCalculator do
       string_addition = StringCalculator.new("1,2,3,4")
       expect(string_addition.add).to eq(10)
     end
+
+    it "returns the sum of numbers with new lines" do
+      calculator = StringCalculator.new("1\n2,3")
+      expect(calculator.add).to eq(6)
+    end
+
+    it "returns the sum with different delimiters" do
+      calculator = StringCalculator.new("//;\n1;2")
+      expect(calculator.add).to eq(3)
+    end
   end
 end
